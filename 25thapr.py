@@ -14,6 +14,10 @@ print(retry(service))
 Write a program that retries an operation a certain number of times.
 The program should print how many attemps succeded and how many failed
 '''
+
+
+
+
 process_id = [19802, 5612, 6712]
 def stop_service(pid):
     if pid in process_id:
@@ -21,7 +25,7 @@ def stop_service(pid):
     return False
     
 
-
+#answer
 def retry(opreation, attempts):
    for n in range(attempts):
       if opreation:

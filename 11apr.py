@@ -1,5 +1,5 @@
 '''
-Examples of string mathods
+Examples of string methods
 '''
 
 
