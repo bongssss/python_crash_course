@@ -1,7 +1,7 @@
 '''
 ABSTRACTION IN OOP
-The process of handling complexities by hiding unnecessary implementation details and showing the user only the 
-essential features
+The process of handling complexities by showing the user only the 
+essential features in a process/program
 ADVANTAGES
 - allows user to understand complex objects easier by projecting their main features
 - makes programs easier to maintain
