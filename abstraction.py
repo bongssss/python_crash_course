@@ -123,15 +123,15 @@ We can access private members from outside of a class by creating public method/
 
 
 ABSTRACTION
-Real lie example
-when watching tv, the tv user only knows he/she may use the buttons on the remote to do it.
+Real life example
+when watching tv, the tv user only knows he/she can use the buttons on the remote to do it.
  What they don't know is how all this is happening internally, 
  for example how the tv sensor is capturing signals from the remote 
  and then how it is processing the received signals to perform the required action of changing the channel.
 
 
 A good way to think of abstraction for a programmer is along side generalization.
- If, for instance, you wanted to create a program to multiply eight times seven,
+ If, for instance, you wanted to create a program/function to multiply eight times seven,
 you wouldn't build a function to only multiply those two numbers but you would build 
 a function that is capable of multiplying any two numbers, making it more flexible, reusable
 and more general purpose 
@@ -140,8 +140,8 @@ Achieving abstraction
 in python abstraction can be achieved by creating abstract classes
 in creating an abstract class in python,  we use the 'abc' abstract base class module
 The term "abstract" refers to the fact that these classes are not meant to be instantiated directly 
-but rather serve as a template for other classes while bas e simply implies that it is used to
-provide a blueprint for  other classes
+but rather serve as a template for other classes while base simply implies that it is aparent class
+for  other classes
 The 'abc' module provides the necessary tools for defining Abstract Base Classes (ABC)
 
 to create an abstract class we use the following syntax:
@@ -150,7 +150,7 @@ from abc import ABC
 class Newclass(ABC): # abstract class inherits ABC tools and features
   @abstractmethod    #decorator for indicating abstract methods
  def newmethod(self):
-   pass   # for abstract mthods, implementation always varies for its subclasses ehnce no implementation is needed
+   pass   # for abstract mthods, implementation always varies for its subclasses hence no implementation is needed
 # implementation must however be provided by each subclass
 
    
@@ -168,14 +168,14 @@ they usually have their implementation in the abstract class.
 '''
 #EXAMPLE OF ABSTRACTION
 from abc import ABC #IMPORT THE ABC FROM abc module
-from abc import abstractmethod
+from abc import abstractmethod #identifier/decorator
 
 #Abstract class
 class Person(ABC):
     
     def __init__(self, name, age, gender, language, course): 
         '''
-        __init__() initializes each new instance of this class.
+        __init__() initializes each new instance of this person class.
        class attributes are usually the same for all instances while instance attributes that are defined
        in the init function are usually not the same across instances
         '''
@@ -191,7 +191,7 @@ class Person(ABC):
         '''
         print(f'I\'m {self.name}, I\'m {self.age}, I speak {self.language}')
 # ABSTRACT METHODS
-    @abstractmethod
+    @abstractmethod #abstract method identifier
     def greeting(self): 
         pass
 
@@ -226,7 +226,7 @@ We write the super() keyword followed by the method name we want to refer from o
         print(f'I study {self.course}')
         
     
-#new instance of student
+#new instance of student class
 new = Student('Ubong', 21, 'male', 'french', 'engineering')
 new.description()
 new.greeting()
@@ -260,7 +260,7 @@ We write the super() keyword followed by the method name we want to refer from o
         print(f'I dont study here, but I teach {self.course}')
 
 
-#first instance of professor
+#first instance of professor class
 first = Professor('Ekanem', 54, 'Male', 'French', 'maths')
 first.description()
 first.greeting()
